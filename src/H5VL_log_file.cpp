@@ -277,123 +277,88 @@ fn_exit:;
  */
 void *H5VL_log_file_open (
     const char *name, unsigned flags, hid_t fapl_id, hid_t dxpl_id, void **req) {
+
+#ifdef LOGVOL_DEBUG
+    if (H5VL_logi_debug_verbose ()) {
+        printf ("H5VL_log_file_open(%s, %u, fapl_id, dxpl_id, %p)\n", name, flags, req);
+    }
+#endif
     herr_t err = 0;
     int mpierr;
     H5VL_log_info_t *info = NULL;
-    H5VL_log_file_t *fp   = NULL;
-    H5VL_log_file_shared_t *file_shared_obj_ptr = NULL;
-
     hid_t uvlid;
     hid_t fdid;  // VFL driver ID
     void *under_vol_info;
     MPI_Comm comm    = MPI_COMM_SELF;
     MPI_Info mpiinfo = MPI_INFO_NULL;
 
-    try {
-        H5VL_LOGI_PROFILING_TIMER_START;
+    H5VL_log_file_t *fp   = NULL;
 
-#ifdef LOGVOL_DEBUG
-        if (H5VL_logi_debug_verbose ()) {
-            printf ("H5VL_log_file_open(%s, %u, fapl_id, dxpl_id, %p)\n", name, flags, req);
-        }
-#endif
+    H5VL_LOGI_PROFILING_TIMER_START;
 
-        file_shared_obj_ptr = H5VL_log_filei_search (name);
-        if (file_shared_obj_ptr == NULL) {
-            file_shared_obj_ptr = new H5VL_log_file_shared_t();
-        }
-        file_shared_obj_ptr->inc_refcnt();
-
-        // Try get info about under VOL
-        H5Pget_vol_info (fapl_id, (void **)&info);
-
-        if (info) {
-            uvlid          = info->uvlid;
-            under_vol_info = info->under_vol_info;
-        } else {  // If no under VOL specified, use the native VOL
-            htri_t ret;
-            ret = H5VLis_connector_registered_by_name ("native");
-            if (ret != 1) { ERR_OUT ("Native VOL not found") }
-            uvlid = H5VLpeek_connector_id_by_name ("native");
-            CHECK_ID (uvlid)
-            under_vol_info = NULL;
-            // return NULL;
-        }
-
-        // Make sure we have mpi enabled
-        fdid = H5Pget_driver (fapl_id);
-        CHECK_ID (fdid)
-        if (fdid == H5FD_MPIO) {
-            err = H5Pget_fapl_mpio (fapl_id, &comm, &mpiinfo);
-        } else
-            err = -1;
-        if (err != 0) {  // No MPI, use MPI_COMM_WORLD
-            comm    = MPI_COMM_SELF;
-            mpiinfo = MPI_INFO_NULL;
-        }
-
-        // Init file obj
-        fp                    = new H5VL_log_file_t (uvlid);
-        fp->shared            = file_shared_obj_ptr;
-        fp->flag              = flags;
-        fp->config            = 0;
-        fp->fd                = -1;
-        fp->sfp               = NULL;
-        fp->lgp               = NULL;
-        fp->mdsize            = 0;
-        fp->zbsize            = 0;
-        fp->zbuf              = NULL;
-        fp->is_log_based_file = true;
-        mpierr                = MPI_Comm_dup (comm, &(fp->comm));
-        CHECK_MPIERR
-        if (mpiinfo != MPI_INFO_NULL) {
-            mpierr = MPI_Info_dup (mpiinfo, &(fp->info));
-            CHECK_MPIERR
-        } else {
-            fp->info = MPI_INFO_NULL;
-        }
-        mpierr = MPI_Comm_rank (comm, &(fp->rank));
-        CHECK_MPIERR
-        mpierr = MPI_Comm_size (comm, &(fp->np));
-        CHECK_MPIERR
-        fp->dxplid = H5Pcopy (dxpl_id);
-        fp->name   = std::string (name);
-        err        = H5Pget_nb_buffer_size (fapl_id, &(fp->bsize));
-        CHECK_ERR
-
-        // Create the file with underlying VOL
-        fp->ufaplid = H5VL_log_filei_get_under_plist (fapl_id);
-        err         = H5Pset_vol (fp->ufaplid, uvlid, under_vol_info);
-        CHECK_ERR
-        err = H5Pset_all_coll_metadata_ops (fp->ufaplid, (hbool_t) false);
-        CHECK_ERR
-        err = H5Pset_coll_metadata_write (fp->ufaplid, (hbool_t) true);
-        CHECK_ERR
-        // err = H5Pset_alignment (fp->ufaplid, 4096, 4096);
-        // CHECK_ERR
-        H5VL_LOGI_PROFILING_TIMER_START;
-        fp->uo = H5VLfile_open (name, flags, fp->ufaplid, dxpl_id, NULL);
-        CHECK_PTR (fp->uo)
-        H5VL_LOGI_PROFILING_TIMER_STOP (fp, TIMER_H5VLFILE_OPEN);
-
-        // Fapl property can overwrite config in file, parse after loading config
-        H5VL_log_filei_parse_fapl (fp, fapl_id);
-
-        H5VL_log_filei_register (fp, fp->shared);
-
-        H5VL_LOGI_PROFILING_TIMER_STOP (fp, TIMER_H5VL_LOG_FILE_OPEN);
+    // Try get info about under VOL
+    H5Pget_vol_info (fapl_id, (void **)&info);
+    if (info) {
+        uvlid          = info->uvlid;
+        under_vol_info = info->under_vol_info;
+    } else {  // If no under VOL specified, use the native VOL
+        htri_t ret;
+        ret = H5VLis_connector_registered_by_name ("native");
+        if (ret != 1) { ERR_OUT ("Native VOL not found") }
+        uvlid = H5VLpeek_connector_id_by_name ("native");
+        CHECK_ID (uvlid)
+        under_vol_info = NULL;
     }
-    H5VL_LOGI_EXP_CATCH
 
+    fdid = H5Pget_driver (fapl_id);
+    CHECK_ID (fdid)
+    if (fdid == H5FD_MPIO) {
+        err = H5Pget_fapl_mpio (fapl_id, &comm, &mpiinfo);
+    } else
+        err = -1;
+    if (err != 0) {  // No MPI, use MPI_COMM_WORLD
+        comm    = MPI_COMM_SELF;
+        mpiinfo = MPI_INFO_NULL;
+    }
+
+    // create fp
+    fp = H5VL_log_filei_open(name, flags, uvlid, dxpl_id, comm, mpiinfo, req);
+    CHECK_PTR(fp);
+
+    // fp->bsize
+    err = H5Pget_nb_buffer_size (fapl_id, &(fp->bsize));
+    CHECK_ERR
+
+    // fp->ufaplid // set vol; H5Pset_all_coll_metadata_ops; H5Pset_coll_metadata_write
+    // Create the file with underlying VOL
+    fp->ufaplid = H5VL_log_filei_get_under_plist (fapl_id);
+    err         = H5Pset_vol (fp->ufaplid, uvlid, under_vol_info);
+    CHECK_ERR
+    err = H5Pset_all_coll_metadata_ops (fp->ufaplid, (hbool_t) false);
+    CHECK_ERR
+    err = H5Pset_coll_metadata_write (fp->ufaplid, (hbool_t) true);
+    CHECK_ERR
+
+    // fp->uo
+    H5VL_LOGI_PROFILING_TIMER_START;
+    fp->uo = H5VLfile_open (name, flags, fp->ufaplid, dxpl_id, NULL);
+    CHECK_PTR (fp->uo)
+    H5VL_LOGI_PROFILING_TIMER_STOP (fp, TIMER_H5VLFILE_OPEN);
+
+    // fp->config and fp->index_type
+    // Fapl property can overwrite config in file, parse after loading config
+    H5VL_log_filei_parse_fapl (fp, fapl_id);
+
+    H5VL_LOGI_PROFILING_TIMER_STOP (fp, TIMER_H5VL_LOG_FILE_OPEN);
     goto fn_exit;
+
 err_out:;
     if (fp) { delete fp; }
     fp = NULL;
 fn_exit:;
     if (comm != MPI_COMM_SELF) { MPI_Comm_free (&comm); }
     if (mpiinfo != MPI_INFO_NULL) { MPI_Info_free (&mpiinfo); }
-    if (info) { free (info); }
-    return (void *)fp;
+    return fp;
 } /* end H5VL_log_file_open() */
 
 /*-------------------------------------------------------------------------

@@ -84,3 +84,6 @@ extern void H5VL_log_filei_dec_ref (H5VL_log_file_t *fp);
 extern void *H5VL_log_filei_wrap (void *uo, H5VL_log_obj_t *cp);
 H5VL_log_file_shared_t *H5VL_log_filei_search (const char *path);
 void H5VL_log_filei_register (H5VL_log_file_t *fp, H5VL_log_file_shared_t* shared);
+
+H5VL_log_file_t *H5VL_log_filei_open (const char *name, unsigned flags, hid_t uvlid,
+                                    hid_t dxpl_id, MPI_Comm comm, MPI_Info mpiinfo, void **req);

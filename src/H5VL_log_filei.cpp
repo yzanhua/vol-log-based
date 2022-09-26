@@ -32,6 +32,7 @@
 #include "H5VL_logi_util.hpp"
 #include "H5VL_logi_wrapper.hpp"
 #include "H5VL_logi_zip.hpp"
+#include "H5VL_log_info.hpp"
 
 //#define DEFAULT_SIZE 1073741824 // 1 GiB
 #define DEFAULT_SIZE 209715200  // 200 MiB
@@ -889,48 +890,20 @@ void H5VL_log_filei_calc_node_rank (H5VL_log_file_t *fp) {
  *-------------------------------------------------------------------------
  */
 void *H5VL_log_filei_wrap (void *uo, H5VL_log_obj_t *cp) {
-    // herr_t err = 0;
-    // int mpierr;
+    H5VL_log_file_t *fp_base = NULL;
     H5VL_log_file_t *fp = NULL;
-    // H5VL_loc_params_t loc;
-    // int attbuf[3];
+
     H5VL_LOGI_PROFILING_TIMER_START;
 
-    /*
-            fp = new H5VL_log_file_t (uo, cp->uvlid);
-            CHECK_PTR (fp)
-            fp->flag = cp->fp->flag;
-            MPI_Comm_dup (cp->fp->comm, &(fp->comm));
-            fp->rank   = cp->fp->rank;
-            fp->dxplid = H5Pcopy (cp->fp->dxplid);
-            fp->bsize  = cp->fp->bsize;
-            fp->name   = cp->fp->name;
 
-            // err=H5VL_log_filei_pool_init(&(fp->data_buf),fp->bsize);
-            // CHECK_ERR
-    H5VL_log_filei_contig_buffer_init (&(fp->meta_buf), 2097152);	 // 200 MiB
+    fp_base = cp->fp;
+    fp = H5VL_log_filei_open(fp_base->name.c_str(), fp_base->flag, fp_base->uvlid, fp_base->dxplid, fp_base->comm, fp_base->info, NULL);
+    fp->bsize = fp_base->bsize;
+    fp->ufaplid = H5Pcopy(fp_base->ufaplid);
+    fp->config = fp_base->config;
+    fp->index_type = fp_base->index_type;
+    fp->uo = uo;
 
-            // Create LOG group
-            loc.obj_type = H5I_FILE;
-            loc.type	 = H5VL_OBJECT_BY_SELF;
-            H5VL_LOGI_PROFILING_TIMER_START
-            fp->lgp = H5VLgroup_open (fp->uo, &loc, fp->uvlid, H5VL_LOG_FILEI_GROUP_LOG,
-       H5P_GROUP_ACCESS_DEFAULT, fp->dxplid, NULL); CHECK_PTR (fp->lgp)
-            H5VL_LOGI_PROFILING_TIMER_STOP (fp, TIMER_H5VLGROUP_OPEN);
-
-            // Att
-             H5VL_logi_get_att (fp, H5VL_LOG_FILEI_ATTR_INT, H5T_NATIVE_INT32, attbuf, fp->dxplid);
-            fp->ndset  = attbuf[0];
-            fp->nldset = attbuf[1];
-            fp->nmdset = attbuf[2];
-             H5VL_log_filei_init_idx (fp);
-
-            // Open the file with MPI
-            mpierr = MPI_File_open (fp->comm, fp->name.c_str (), MPI_MODE_RDWR, MPI_INFO_NULL,
-       &(fp->fh)); CHECK_MPIERR
-    */
-
-    fp = cp->fp;
     // fp->refcnt++;
 
     H5VL_LOGI_PROFILING_TIMER_STOP (fp, TIMER_H5VL_LOG_FILE_OPEN);
@@ -998,4 +971,55 @@ void H5VL_log_file_shared_t::dec_refcnt(ino_t ino) {
         file_shared_objs.erase(ino);
         delete this;
     }
+}
+
+H5VL_log_file_t *H5VL_log_filei_open (const char *name, unsigned flags, hid_t uvlid,
+                                    hid_t dxpl_id, MPI_Comm comm, MPI_Info mpiinfo, void **req) {
+    herr_t err = 0;
+    int mpierr;
+    H5VL_log_file_t *fp   = NULL;
+    H5VL_log_file_shared_t *file_shared_obj_ptr = NULL;
+
+    try {
+        file_shared_obj_ptr = H5VL_log_filei_search (name);
+        if (file_shared_obj_ptr == NULL) {
+            file_shared_obj_ptr = new H5VL_log_file_shared_t();
+        }
+        file_shared_obj_ptr->inc_refcnt();
+        // Init file obj
+        fp                    = new H5VL_log_file_t (uvlid);
+        fp->shared            = file_shared_obj_ptr;
+        fp->flag              = flags;
+        fp->config            = 0;
+        fp->fd                = -1;
+        fp->sfp               = NULL;
+        fp->lgp               = NULL;
+        fp->mdsize            = 0;
+        fp->zbsize            = 0;
+        fp->zbuf              = NULL;
+        fp->is_log_based_file = true;
+        mpierr                = MPI_Comm_dup (comm, &(fp->comm));//
+        CHECK_MPIERR
+        if (mpiinfo != MPI_INFO_NULL) {
+            mpierr = MPI_Info_dup (mpiinfo, &(fp->info));//
+            CHECK_MPIERR
+        } else {
+            fp->info = MPI_INFO_NULL;
+        }
+        mpierr = MPI_Comm_rank (comm, &(fp->rank)); //
+        CHECK_MPIERR
+        mpierr = MPI_Comm_size (comm, &(fp->np));//
+        CHECK_MPIERR
+        fp->dxplid = H5Pcopy (dxpl_id);
+        fp->name   = std::string (name);
+        H5VL_log_filei_register (fp, fp->shared);
+    }
+    H5VL_LOGI_EXP_CATCH
+
+    goto fn_exit;
+err_out:;
+    if (fp) { delete fp; }
+    fp = NULL;
+fn_exit:;
+    return fp;
 }
