@@ -45,22 +45,22 @@
         }                                  \
     } while (0)
 
-std::map<decltype (stcrtstat::st_ino), H5VL_log_file_t *> files;
-H5VL_log_file_t *H5VL_log_filei_search (const char *path) {
+std::map<decltype (stcrtstat::st_ino), H5VL_log_file_shared_t *> file_shared_objs;
+H5VL_log_file_shared_t *H5VL_log_filei_search (const char *path) {
     int err;
     struct stat s;
 
     err = stat (path, &s);
 
     if (err == 0) {
-        auto f = files.find (s.st_ino);
+        auto f = file_shared_objs.find (s.st_ino);
 
-        if (f != files.end ()) return f->second;
+        if (f != file_shared_objs.end ()) return f->second;
     }
 
     return NULL;
 }
-void H5VL_log_filei_register (H5VL_log_file_t *fp) {
+void H5VL_log_filei_register (H5VL_log_file_t *fp, H5VL_log_file_shared_t* shared) {
     int err;
     struct stat s;
 
@@ -68,17 +68,14 @@ void H5VL_log_filei_register (H5VL_log_file_t *fp) {
     if (err == 0) {
         fp->ino         = s.st_ino;
         fp->has_ino     = true;
-        files[s.st_ino] = fp;
+        file_shared_objs[s.st_ino] = shared;
     } else {
         fp->has_ino = false;
         if (!fp->rank) {
-            std::cout << "Warning: inode info not found, can't detect duplicate file open"
+            std::cout << "Warning: inode info not found, can't perform file open"
                       << std::endl;
         }
     }
-}
-void H5VL_log_filei_rm (H5VL_log_file_t *fp) {
-    if (fp->has_ino) { files.erase (fp->ino); }
 }
 
 void H5VL_log_filei_balloc (H5VL_log_file_t *fp, size_t size, void **buf) {
@@ -127,18 +124,18 @@ void H5VL_log_filei_post_open (H5VL_log_file_t *fp) {
     // Att
     H5VL_logi_get_att (fp, H5VL_LOG_FILEI_ATTR_INT, H5T_NATIVE_INT32, attbuf, fp->dxplid);
 
-    fp->ndset  = attbuf[0];
-    fp->nldset = attbuf[1];
-    fp->nmdset = attbuf[2];
+    fp->shared->ndset  = attbuf[0];
+    fp->shared->nldset = attbuf[1];
+    fp->shared->nmdset = attbuf[2];
     fp->config = attbuf[3];
     fp->ngroup = attbuf[3];
-    fp->mreqs.resize (fp->ndset, NULL);       // Merge write reqeusts
-    fp->dsets_info.resize (fp->ndset, NULL);  // Dataset info
+    fp->mreqs.resize (fp->shared->ndset, NULL);       // Merge write reqeusts
+    fp->dsets_info.resize (fp->shared->ndset, NULL);  // Dataset info
     fp->group_rank = fp->rank;
     fp->group_comm = fp->comm;
     fp->group_id   = 0;
     H5VL_log_filei_init_idx (fp);
-    fp->idx->reserve (fp->ndset);
+    fp->idx->reserve (fp->shared->ndset);
 
     H5VL_LOGI_PROFILING_TIMER_START;
     if (fp->config & H5VL_FILEI_CONFIG_SUBFILING) {
@@ -600,7 +597,7 @@ void H5VL_log_filei_close (H5VL_log_file_t *fp) {
     if (!fp->is_log_based_file) {
         H5VLfile_close (fp->uo, fp->uvlid, fp->dxplid, NULL);
         // Clean up
-        H5VL_log_filei_rm (fp);
+        if (fp->shared) {fp->shared->dec_refcnt(fp->ino);}
         MPI_Comm_free (&(fp->comm));
         if (fp->info != MPI_INFO_NULL) { MPI_Info_free (&(fp->info)); }
         H5Pclose (fp->dxplid);
@@ -621,9 +618,9 @@ void H5VL_log_filei_close (H5VL_log_file_t *fp) {
         H5VL_log_filei_metaflush (fp);
 
         // Update file attr
-        attbuf[0] = fp->ndset;
-        attbuf[1] = fp->nldset;
-        attbuf[2] = fp->nmdset;
+        attbuf[0] = fp->shared->ndset;
+        attbuf[1] = fp->shared->nldset;
+        attbuf[2] = fp->shared->nmdset;
         attbuf[3] = fp->config;
         attbuf[4] = fp->ngroup;
         // Att in the subfile
@@ -695,8 +692,6 @@ void H5VL_log_filei_close (H5VL_log_file_t *fp) {
     }
 #endif
 
-    H5VL_log_filei_rm (fp);
-
     // Clean up
     if (fp->group_comm != fp->comm) { MPI_Comm_free (&(fp->group_comm)); }
     MPI_Comm_free (&(fp->comm));
@@ -760,9 +755,9 @@ void H5VL_log_filei_create_subfile (H5VL_log_file_t *fp,
     H5VL_LOGI_PROFILING_TIMER_STOP (fp, TIMER_H5VLFILE_CREATE);
 
     // Att
-    attbuf[0] = fp->ndset;
-    attbuf[1] = fp->nldset;
-    attbuf[2] = fp->nmdset;
+    attbuf[0] = fp->shared->ndset;
+    attbuf[1] = fp->shared->nldset;
+    attbuf[2] = fp->shared->nmdset;
     attbuf[3] = fp->config & !(H5VL_FILEI_CONFIG_SUBFILING);  // No subfiling flag in a subfile
     attbuf[4] = fp->ngroup;
     H5VL_logi_add_att (fp->sfp, fp->uvlid, H5I_FILE, H5VL_LOG_FILEI_ATTR_INT, H5T_STD_I32LE,
@@ -803,8 +798,8 @@ void H5VL_log_filei_open_subfile (H5VL_log_file_t *fp,
     // Att
     H5VL_logi_get_att (fp, H5VL_LOG_FILEI_ATTR_INT, H5T_NATIVE_INT32, attbuf, fp->dxplid);
 
-    fp->nldset = attbuf[1];
-    fp->nmdset = attbuf[2];
+    fp->shared->nldset = attbuf[1];
+    fp->shared->nmdset = attbuf[2];
 }
 
 void H5VL_log_filei_calc_node_rank (H5VL_log_file_t *fp) {
@@ -985,3 +980,22 @@ H5VL_log_file_t::~H5VL_log_file_t () {
         H5VL_logi_dec_ref (this->uvlid);
 }
 */
+
+H5VL_log_file_shared_t::H5VL_log_file_shared_t() {
+    this->ndset = 0;
+    this->nldset = 0;
+    this->nmdset = 0;
+    this->refcnt = 0;
+}
+
+void H5VL_log_file_shared_t::inc_refcnt() {
+    this->refcnt++;
+}
+
+void H5VL_log_file_shared_t::dec_refcnt(ino_t ino) {
+    this->refcnt--;
+    if (this->refcnt == 0) {
+        file_shared_objs.erase(ino);
+        delete this;
+    }
+}

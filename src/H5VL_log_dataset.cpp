@@ -109,7 +109,7 @@ void *H5VL_log_dataset_create (void *obj,
         err = H5Pset_layout (dcpl_id, H5D_CONTIGUOUS);
         CHECK_ERR
 
-        dp->id = dp->fp->ndset;  // ID nees to be set before writing to attribute
+        dp->id = dp->fp->shared->ndset;  // ID nees to be set before writing to attribute
 
         H5VL_LOGI_PROFILING_TIMER_START;
         zero_space = H5Screate (H5S_NULL);
@@ -161,12 +161,12 @@ void *H5VL_log_dataset_create (void *obj,
         }
 
         // Append dataset to the file
-        LOG_VOL_ASSERT (dp->fp->ndset == (int)(dp->fp->dsets_info.size ()))
-        LOG_VOL_ASSERT (dp->fp->ndset == (int)(dp->fp->mreqs.size ()))
-        dp->fp->ndset++;
+        LOG_VOL_ASSERT (dp->fp->shared->ndset == (int)(dp->fp->dsets_info.size ()))
+        LOG_VOL_ASSERT (dp->fp->shared->ndset == (int)(dp->fp->mreqs.size ()))
+        dp->fp->shared->ndset++;
         dp->fp->dsets_info.push_back (dip);          // Dataset info
-        dp->fp->idx->reserve (dp->fp->ndset);        // Index for H5Dread
-        dp->fp->mreqs.resize (dp->fp->ndset, NULL);  // Merged requests
+        dp->fp->idx->reserve (dp->fp->shared->ndset);        // Index for H5Dread
+        dp->fp->mreqs.resize (dp->fp->shared->ndset, NULL);  // Merged requests
 
         // Create soft link to aid dataset visiting on file opening
         // Broken, not used anymore

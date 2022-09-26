@@ -697,7 +697,7 @@ void H5VL_log_nb_flush_write_reqs (void *file, hid_t dxplid) {
 
     // Write out the data
     if (fsize_all) {
-        sprintf (dname, "%s_%d", H5VL_LOG_FILEI_DSET_DATA, fp->nldset);
+        sprintf (dname, "%s_%d", H5VL_LOG_FILEI_DSET_DATA, fp->shared->nldset);
 
         // Create log dataset
         if (fsize_group) {
@@ -787,7 +787,7 @@ void H5VL_log_nb_flush_write_reqs (void *file, hid_t dxplid) {
             fp->nflushed = fp->wreqs.size ();
 
             // Increase number of log dataset
-            (fp->nldset)++;
+            (fp->shared->nldset)++;
         }
 
         // Create virtaul log dataset in the main file
@@ -986,7 +986,7 @@ void H5VL_log_nb_flush_write_reqs_align (void *file, hid_t dxplid) {
 
         ldsid = H5Screate_simple (1, &dsize, &dsize);
         CHECK_ID (ldsid)
-        sprintf (dname, "%s_%d", H5VL_LOG_FILEI_DSET_DATA, fp->nldset);
+        sprintf (dname, "%s_%d", H5VL_LOG_FILEI_DSET_DATA, fp->shared->nldset);
         loc.obj_type = H5I_GROUP;
         loc.type     = H5VL_OBJECT_BY_SELF;
         ldp          = H5VLdataset_create (fp->lgp, &loc, fp->uvlid, dname, H5P_LINK_CREATE_DEFAULT,
@@ -1041,7 +1041,7 @@ void H5VL_log_nb_flush_write_reqs_align (void *file, hid_t dxplid) {
                 if (db.xbuf != db.ubuf) { H5VL_log_filei_bfree (fp, (void *)(db.xbuf)); }
             }
         }
-        (fp->nldset)++;
+        (fp->shared->nldset)++;
         fp->nflushed = fp->wreqs.size ();
 
         if (fsize_all) { fp->metadirty = true; }

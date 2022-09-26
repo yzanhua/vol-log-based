@@ -48,6 +48,7 @@ void *H5VL_log_file_create (
     int mpierr;
     H5VL_log_info_t *info = NULL;
     H5VL_log_file_t *fp   = NULL;
+    H5VL_log_file_shared_t *file_shared_obj_ptr = NULL;
     H5VL_loc_params_t loc;
     hid_t uvlid;
     hid_t fdid;  // VFL driver ID
@@ -72,11 +73,11 @@ void *H5VL_log_file_create (
         }
 #endif
 
-        fp = H5VL_log_filei_search (name);
-        if (fp) {
-            fp = NULL;
-            RET_ERR ("File already exist")
+        file_shared_obj_ptr = H5VL_log_filei_search (name);
+        if (file_shared_obj_ptr == NULL) {
+            file_shared_obj_ptr = new H5VL_log_file_shared_t();
         }
+        file_shared_obj_ptr->inc_refcnt();
 
         H5VL_LOGI_PROFILING_TIMER_START;
         // Try get info about under VOL
@@ -109,9 +110,7 @@ void *H5VL_log_file_create (
         // Init file obj
         fp                    = new H5VL_log_file_t (uvlid);
         fp->flag              = flags;
-        fp->nldset            = 0;
-        fp->nmdset            = 0;
-        fp->ndset             = 0;
+        fp->shared            = file_shared_obj_ptr;
         fp->config            = 0;
         fp->mdsize            = 0;
         fp->zbsize            = 0;
@@ -240,15 +239,15 @@ void *H5VL_log_file_create (
         CHECK_MPIERR
 
         // Att
-        attbuf[0] = fp->ndset;
-        attbuf[1] = fp->nldset;
-        attbuf[2] = fp->nmdset;
+        attbuf[0] = fp->shared->ndset;
+        attbuf[1] = fp->shared->nldset;
+        attbuf[2] = fp->shared->nmdset;
         attbuf[3] = fp->config;
         attbuf[4] = fp->ngroup;
         H5VL_logi_add_att (fp, H5VL_LOG_FILEI_ATTR_INT, H5T_STD_I32LE, H5T_NATIVE_INT32,
                            H5VL_LOG_FILEI_N_ATTR_INT, attbuf, dxpl_id, NULL);
 
-        H5VL_log_filei_register (fp);
+        H5VL_log_filei_register (fp, fp->shared);
 
         H5VL_LOGI_PROFILING_TIMER_STOP (fp, TIMER_H5VL_LOG_FILE_CREATE);
     }
@@ -282,6 +281,8 @@ void *H5VL_log_file_open (
     int mpierr;
     H5VL_log_info_t *info = NULL;
     H5VL_log_file_t *fp   = NULL;
+    H5VL_log_file_shared_t *file_shared_obj_ptr = NULL;
+
     hid_t uvlid;
     hid_t fdid;  // VFL driver ID
     void *under_vol_info;
@@ -297,11 +298,11 @@ void *H5VL_log_file_open (
         }
 #endif
 
-        fp = H5VL_log_filei_search (name);
-        if (fp) {
-            fp = NULL;
-            RET_ERR ("File already exist")
+        file_shared_obj_ptr = H5VL_log_filei_search (name);
+        if (file_shared_obj_ptr == NULL) {
+            file_shared_obj_ptr = new H5VL_log_file_shared_t();
         }
+        file_shared_obj_ptr->inc_refcnt();
 
         // Try get info about under VOL
         H5Pget_vol_info (fapl_id, (void **)&info);
@@ -333,6 +334,7 @@ void *H5VL_log_file_open (
 
         // Init file obj
         fp                    = new H5VL_log_file_t (uvlid);
+        fp->shared            = file_shared_obj_ptr;
         fp->flag              = flags;
         fp->config            = 0;
         fp->fd                = -1;
@@ -377,7 +379,7 @@ void *H5VL_log_file_open (
         // Fapl property can overwrite config in file, parse after loading config
         H5VL_log_filei_parse_fapl (fp, fapl_id);
 
-        H5VL_log_filei_register (fp);
+        H5VL_log_filei_register (fp, fp->shared);
 
         H5VL_LOGI_PROFILING_TIMER_STOP (fp, TIMER_H5VL_LOG_FILE_OPEN);
     }

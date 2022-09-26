@@ -35,6 +35,16 @@ typedef struct H5VL_log_cord_t {
 
 using stcrtstat = struct stat;
 
+typedef struct H5VL_log_file_shared_t {
+    int ndset;   // # user datasets, used to assign ID
+    int nldset;  // # data datasets
+    int nmdset;  // # metadata datasets
+    int refcnt;  // Number of H5VL_log_file_t objects holding reference to this shared obj
+    H5VL_log_file_shared_t();
+    void inc_refcnt();
+    void dec_refcnt(ino_t ino);
+} H5VL_log_file_shared_t;
+
 /* The log VOL file object */
 typedef struct H5VL_log_file_t : H5VL_log_obj_t {
     int rank;       // Global rank of current process
@@ -64,9 +74,7 @@ typedef struct H5VL_log_file_t : H5VL_log_obj_t {
     hid_t ufaplid;  // Copy of fapl passed to the underlying VOL
 
     void *lgp;   // Log group
-    int ndset;   // # user datasets, used to assign ID
-    int nldset;  // # data datasets
-    int nmdset;  // # metadata datasets
+    H5VL_log_file_shared_t *shared;
 
     MPI_File
         fh;     // MPI file handle to the target file for data and metadata (master file or subfile)
