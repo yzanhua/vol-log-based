@@ -37,10 +37,10 @@ using stcrtstat = struct stat;
 
 /* The log VOL file object */
 typedef struct H5VL_log_file_t : H5VL_log_obj_t {
-    int rank;       // Global rank of current process
-    int np;         // Number of processes
-    MPI_Comm comm;  // Global communicator
-    MPI_Info info;  // Main file info
+    int rank;       // Global rank of current process // per obj
+    int np;         // Number of processes // per obj
+    MPI_Comm comm;  // Global communicator // per obj
+    MPI_Info info;  // Main file info // per obj
 
     /* Subfiling parameters */
     // Group is a set of processes sharing the same subfile or lustre stripe
@@ -56,6 +56,8 @@ typedef struct H5VL_log_file_t : H5VL_log_obj_t {
     int scount;           // Lustre stripping count
     MPI_Comm group_comm;  // Communicator among the processes sharing the same subfile
 
+
+
     int refcnt;     // Number of VOL objects holding reference to the file
     bool closing;   // If we are closing the file
     unsigned flag;  // HDF5 file creation/opening flag
@@ -64,9 +66,11 @@ typedef struct H5VL_log_file_t : H5VL_log_obj_t {
     hid_t ufaplid;  // Copy of fapl passed to the underlying VOL
 
     void *lgp;   // Log group
-    int ndset;   // # user datasets, used to assign ID
-    int nldset;  // # data datasets
-    int nmdset;  // # metadata datasets
+// per obj up to here
+
+    int ndset;   // # user datasets, used to assign ID  // shared
+    int nldset;  // # data datasets // shared
+    int nmdset;  // # metadata datasets // shared
 
     MPI_File
         fh;     // MPI file handle to the target file for data and metadata (master file or subfile)
@@ -81,7 +85,8 @@ typedef struct H5VL_log_file_t : H5VL_log_obj_t {
     std::vector<H5VL_log_rreq_t *> rreqs;
 
     std::vector<H5VL_log_merged_wreq_t *> mreqs;     // Merged request for every dataset
-    std::vector<H5VL_log_dset_info_t *> dsets_info;  // Opened datasets
+    
+    std::vector<H5VL_log_dset_info_t *> dsets_info;  // Opened datasets // shared
 
     ssize_t bsize;  // Current data buffer size allocated
     size_t bused;   // Current data buffer size used
@@ -98,15 +103,15 @@ typedef struct H5VL_log_file_t : H5VL_log_obj_t {
     // Write metadata handling
     std::unordered_map<H5VL_log_wreq_t, H5VL_log_wreq_t *>
         wreq_hash;  // Hash table for deduplication
-    MPI_Offset mdsize;
+    MPI_Offset mdsize; // total size of metadata
     char *zbuf;     // Buffer for metadata compression
     size_t zbsize;  // size of zbuf
     // std::vector<int> meta_ref;
 
     // std::vector<int> lut;
-    H5VL_logi_idx_t *idx;  // Index of data, for reading
-    bool idxvalid;         // Is index up to date
-    bool metadirty;        // Is there pending metadata to flush
+    H5VL_logi_idx_t *idx;  // Index of data, for reading  // shared
+    bool idxvalid;         // Is index up to date // shared
+    bool metadirty;        // Is there pending metadata to flush // shared
 
     // Configuration flag
     int config;  // Config flags
