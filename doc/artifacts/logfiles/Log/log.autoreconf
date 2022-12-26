@@ -1,0 +1,15 @@
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, './scripts'.
+libtoolize: copying file './scripts/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:163: installing './scripts/compile'
+configure.ac:240: installing './scripts/config.guess'
+configure.ac:240: installing './scripts/config.sub'
+configure.ac:27: installing './scripts/install-sh'
+configure.ac:27: installing './scripts/missing'
+examples/Makefile.am: installing './scripts/depcomp'
+parallel-tests: installing './scripts/test-driver'

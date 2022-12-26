@@ -1,0 +1,160 @@
+Making install in src
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/src'
+make  install-am
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/src'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/src'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/Log/install/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libH5VL_log.la '/global/u2/z/zanhua/VOLS/Log/install/lib'
+libtool: install: /usr/bin/install -c .libs/libH5VL_log.so.0.0.0 /global/u2/z/zanhua/VOLS/Log/install/lib/libH5VL_log.so.0.0.0
+libtool: install: (cd /global/u2/z/zanhua/VOLS/Log/install/lib && { ln -s -f libH5VL_log.so.0.0.0 libH5VL_log.so.0 || { rm -f libH5VL_log.so.0 && ln -s libH5VL_log.so.0.0.0 libH5VL_log.so.0; }; })
+libtool: install: (cd /global/u2/z/zanhua/VOLS/Log/install/lib && { ln -s -f libH5VL_log.so.0.0.0 libH5VL_log.so || { rm -f libH5VL_log.so && ln -s libH5VL_log.so.0.0.0 libH5VL_log.so; }; })
+libtool: install: /usr/bin/install -c .libs/libH5VL_log.lai /global/u2/z/zanhua/VOLS/Log/install/lib/libH5VL_log.la
+libtool: install: /usr/bin/install -c .libs/libH5VL_log.a /global/u2/z/zanhua/VOLS/Log/install/lib/libH5VL_log.a
+libtool: install: chmod 644 /global/u2/z/zanhua/VOLS/Log/install/lib/libH5VL_log.a
+libtool: install: ranlib /global/u2/z/zanhua/VOLS/Log/install/lib/libH5VL_log.a
+libtool: finish: PATH="/global/common/software/nersc/bin:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Systems/2022.2.1:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Systems/2022.2.1/bin:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Compute/2022.1.1:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/cuda/11.7/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/cuda/11.7/libnvvp:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/profilers/Nsight_Compute:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/profilers/Nsight_Systems/bin:/opt/cray/pe/perftools/22.09.0/bin:/opt/cray/pe/papi/6.0.0.16/bin:/opt/cray/pe/gcc/11.2.0/bin:/opt/cray/pe/craype/2.7.19/bin:/opt/cray/pe/mpich/8.1.22/ofi/gnu/9.1/bin:/opt/cray/pe/mpich/8.1.22/bin:/opt/cray/libfabric/1.15.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/sbin" ldconfig -n /global/u2/z/zanhua/VOLS/Log/install/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /global/u2/z/zanhua/VOLS/Log/install/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/Log/install/include'
+ /usr/bin/install -c -m 644 H5VL_log.h '/global/u2/z/zanhua/VOLS/Log/install/include'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/src'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/src'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/src'
+Making install in .
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based'
+Making install in tests
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests'
+Making install in basic
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/basic'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/basic'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/basic'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/basic'
+Making install in dynamic
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/dynamic'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/dynamic'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/dynamic'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/dynamic'
+Making install in testcases
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/testcases'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/testcases'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/testcases'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/testcases'
+Making install in external
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/external'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/external'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/external'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/external'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/external'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/external'
+Making install in passthru
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/passthru'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/passthru'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/passthru'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/passthru'
+Making install in read_regular
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/read_regular'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/read_regular'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/read_regular'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests/read_regular'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/tests'
+Making install in examples
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples'
+Making install in hdf5_examples
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples/hdf5_examples'
+make  install-am
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples/hdf5_examples'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples/hdf5_examples'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples/hdf5_examples'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples/hdf5_examples'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples/hdf5_examples'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/examples'
+Making install in utils
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils'
+Making install in h5lreplay
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils/h5lreplay'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils/h5lreplay'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/Log/install/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c h5lreplay '/global/u2/z/zanhua/VOLS/Log/install/bin'
+libtool: install: /usr/bin/install -c h5lreplay /global/u2/z/zanhua/VOLS/Log/install/bin/h5lreplay
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils/h5lreplay'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils/h5lreplay'
+Making install in h5ldump
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils/h5ldump'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils/h5ldump'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/Log/install/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c h5ldump '/global/u2/z/zanhua/VOLS/Log/install/bin'
+libtool: install: /usr/bin/install -c .libs/h5ldump /global/u2/z/zanhua/VOLS/Log/install/bin/h5ldump
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils/h5ldump'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils/h5ldump'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/Log/install/bin'
+ /usr/bin/install -c h5lconfig h5lenv.bash h5lenv.csh h5lpcc h5lpcxx '/global/u2/z/zanhua/VOLS/Log/install/bin'
+make  install-exec-hook
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils'
+/usr/bin/sed -i'' -e "1,10s|_RELEASE_DATE_|December 22, 2022|" /global/u2/z/zanhua/VOLS/Log/install/bin/h5lconfig
+/usr/bin/sed -i'' -e "1,10s|_VERSION_|1.4.0|" /global/u2/z/zanhua/VOLS/Log/install/bin/h5lconfig
+/usr/bin/sed -i'' -e 's|INSTALL_PREFIX|/global/u2/z/zanhua/VOLS/Log/install|g ; s|INSTALL_EXEC_PREFIX|/global/u2/z/zanhua/VOLS/Log/install|g' /global/u2/z/zanhua/VOLS/Log/install/bin/h5lconfig
+/usr/bin/sed -i'' -e 's|INSTALL_PREFIX|/global/u2/z/zanhua/VOLS/Log/install|g ; s|INSTALL_EXEC_PREFIX|/global/u2/z/zanhua/VOLS/Log/install|g' /global/u2/z/zanhua/VOLS/Log/install/bin/h5lpcc
+/usr/bin/sed -i'' -e 's|INSTALL_PREFIX|/global/u2/z/zanhua/VOLS/Log/install|g ; s|INSTALL_EXEC_PREFIX|/global/u2/z/zanhua/VOLS/Log/install|g' /global/u2/z/zanhua/VOLS/Log/install/bin/h5lpcxx
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils'
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/utils'
+Making install in doc
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/doc'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/vol-log-based/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/doc'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/vol-log-based/doc'

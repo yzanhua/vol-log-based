@@ -1,0 +1,356 @@
+Making install in src
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/src'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/src'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libhdf5.la '/global/u2/z/zanhua/VOLS/HDF5/lib'
+libtool: install: /usr/bin/install -c .libs/libhdf5.so.303.0.0 /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5.so.303.0.0
+libtool: install: (cd /global/u2/z/zanhua/VOLS/HDF5/lib && { ln -s -f libhdf5.so.303.0.0 libhdf5.so.303 || { rm -f libhdf5.so.303 && ln -s libhdf5.so.303.0.0 libhdf5.so.303; }; })
+libtool: install: (cd /global/u2/z/zanhua/VOLS/HDF5/lib && { ln -s -f libhdf5.so.303.0.0 libhdf5.so || { rm -f libhdf5.so && ln -s libhdf5.so.303.0.0 libhdf5.so; }; })
+libtool: install: /usr/bin/install -c .libs/libhdf5.lai /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5.la
+libtool: install: /usr/bin/install -c .libs/libhdf5.a /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5.a
+libtool: install: chmod 644 /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5.a
+libtool: install: ranlib /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5.a
+libtool: finish: PATH="/global/common/software/nersc/bin:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Systems/2022.2.1:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Systems/2022.2.1/bin:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Compute/2022.1.1:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/cuda/11.7/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/cuda/11.7/libnvvp:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/profilers/Nsight_Compute:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/profilers/Nsight_Systems/bin:/opt/cray/pe/perftools/22.09.0/bin:/opt/cray/pe/papi/6.0.0.16/bin:/opt/cray/pe/gcc/11.2.0/bin:/opt/cray/pe/craype/2.7.19/bin:/opt/cray/pe/mpich/8.1.22/ofi/gnu/9.1/bin:/opt/cray/pe/mpich/8.1.22/bin:/opt/cray/libfabric/1.15.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/sbin" ldconfig -n /global/u2/z/zanhua/VOLS/HDF5/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /global/u2/z/zanhua/VOLS/HDF5/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/include'
+ /usr/bin/install -c -m 644 hdf5.h H5api_adpt.h H5overflow.h H5pubconf.h H5public.h H5version.h H5Apublic.h H5ACpublic.h H5Cpublic.h H5Dpublic.h H5Epubgen.h H5Epublic.h H5ESpublic.h H5Fpublic.h H5FDpublic.h H5FDcore.h H5FDdirect.h H5FDfamily.h H5FDhdfs.h H5FDlog.h H5FDmirror.h H5FDmpi.h H5FDmpio.h H5FDmulti.h H5FDonion.h H5FDros3.h H5FDsec2.h H5FDsplitter.h H5FDstdio.h H5FDsubfiling/H5FDsubfiling.h H5FDsubfiling/H5FDioc.h H5FDwindows.h H5Gpublic.h H5Ipublic.h H5Lpublic.h H5Mpublic.h H5MMpublic.h H5Opublic.h H5Ppublic.h H5PLextern.h '/global/u2/z/zanhua/VOLS/HDF5/include'
+ /usr/bin/install -c -m 644 H5PLpublic.h H5Rpublic.h H5Spublic.h H5Tpublic.h H5VLconnector.h H5VLconnector_passthru.h H5VLnative.h H5VLpassthru.h H5VLpublic.h H5Zpublic.h H5ESdevelop.h H5FDdevelop.h H5Idevelop.h H5Ldevelop.h H5Tdevelop.h H5TSdevelop.h H5Zdevelop.h '/global/u2/z/zanhua/VOLS/HDF5/include'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/lib'
+ /usr/bin/install -c -m 644 libhdf5.settings '/global/u2/z/zanhua/VOLS/HDF5/lib'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/src'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/src'
+Making install in bin
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/bin'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/bin'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+ /usr/bin/install -c h5redeploy '/global/u2/z/zanhua/VOLS/HDF5/bin'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/bin'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/bin'
+Making install in tools
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools'
+Making install in lib
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/lib'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/lib'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/lib'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/lib'
+Making install in src
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src'
+Making install in h5diff
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5diff'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5diff'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5diff ph5diff '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5diff /global/u2/z/zanhua/VOLS/HDF5/bin/h5diff
+libtool: install: /usr/bin/install -c .libs/ph5diff /global/u2/z/zanhua/VOLS/HDF5/bin/ph5diff
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5diff'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5diff'
+Making install in h5ls
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5ls'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5ls'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5ls '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5ls /global/u2/z/zanhua/VOLS/HDF5/bin/h5ls
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5ls'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5ls'
+Making install in h5dump
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5dump'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5dump'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5dump '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5dump /global/u2/z/zanhua/VOLS/HDF5/bin/h5dump
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5dump'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5dump'
+Making install in misc
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/misc'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/misc'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5debug h5repart h5mkgrp h5clear h5delete '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5debug /global/u2/z/zanhua/VOLS/HDF5/bin/h5debug
+libtool: install: /usr/bin/install -c .libs/h5repart /global/u2/z/zanhua/VOLS/HDF5/bin/h5repart
+libtool: install: /usr/bin/install -c .libs/h5mkgrp /global/u2/z/zanhua/VOLS/HDF5/bin/h5mkgrp
+libtool: install: /usr/bin/install -c .libs/h5clear /global/u2/z/zanhua/VOLS/HDF5/bin/h5clear
+libtool: install: /usr/bin/install -c .libs/h5delete /global/u2/z/zanhua/VOLS/HDF5/bin/h5delete
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/misc'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/misc'
+Making install in h5import
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5import'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5import'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5import '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5import /global/u2/z/zanhua/VOLS/HDF5/bin/h5import
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5import'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5import'
+Making install in h5repack
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5repack'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5repack'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5repack '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5repack /global/u2/z/zanhua/VOLS/HDF5/bin/h5repack
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5repack'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5repack'
+Making install in h5jam
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5jam'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5jam'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5jam h5unjam '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5jam /global/u2/z/zanhua/VOLS/HDF5/bin/h5jam
+libtool: install: /usr/bin/install -c .libs/h5unjam /global/u2/z/zanhua/VOLS/HDF5/bin/h5unjam
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5jam'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5jam'
+Making install in h5copy
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5copy'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5copy'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5copy '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5copy /global/u2/z/zanhua/VOLS/HDF5/bin/h5copy
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5copy'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5copy'
+Making install in h5format_convert
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5format_convert'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5format_convert'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5format_convert '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5format_convert /global/u2/z/zanhua/VOLS/HDF5/bin/h5format_convert
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5format_convert'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5format_convert'
+Making install in h5stat
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5stat'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5stat'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5stat '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5stat /global/u2/z/zanhua/VOLS/HDF5/bin/h5stat
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5stat'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5stat'
+Making install in h5perf
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5perf'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5perf'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5perf_serial h5perf '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5perf_serial /global/u2/z/zanhua/VOLS/HDF5/bin/h5perf_serial
+libtool: install: /usr/bin/install -c .libs/h5perf /global/u2/z/zanhua/VOLS/HDF5/bin/h5perf
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5perf'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src/h5perf'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools/src'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/tools'
+Making install in utils
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils'
+Making install in tools
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils/tools'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils/tools'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils/tools'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils/tools'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils/tools'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils/tools'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/utils'
+Making install in .
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3'
+Making install in hl
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl'
+Making install in src
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/src'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/src'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/lib'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libhdf5_hl.la '/global/u2/z/zanhua/VOLS/HDF5/lib'
+libtool: warning: relinking 'libhdf5_hl.la'
+libtool: install: (cd /global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/src; /bin/sh "/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/libtool"  --silent --tag CC --mode=relink cc -std=c99 -Wall -Wcast-qual -Wconversion -Wextra -Wfloat-equal -Wformat=2 -Winit-self -Winvalid-pch -Wmissing-include-dirs -Wshadow -Wundef -Wwrite-strings -pedantic -Wno-c++-compat -Wlarger-than=2560 -Wlogical-op -Wframe-larger-than=16384 -Wpacked-bitfield-compat -Wsync-nand -Wno-unsuffixed-float-constants -Wdouble-promotion -Wtrampolines -Wstack-usage=8192 -Wmaybe-uninitialized -Wdate-time -Warray-bounds=2 -Wc99-c11-compat -Wduplicated-cond -Whsa -Wnormalized -Wnull-dereference -Wunused-const-variable -Walloca -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wattribute-alias -Wcast-align=strict -Wshift-overflow=2 -Wattribute-alias=2 -Wmissing-profile -Wc11-c2x-compat -fstdarg-opt -fdiagnostics-urls=never -fno-diagnostics-color -s -Wbad-function-cast -Wcast-align -Wformat -Wimplicit-function-declaration -Wint-to-pointer-cast -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wold-style-definition -Wpacked -Wpointer-sign -Wpointer-to-int-cast -Wredundant-decls -Wstrict-prototypes -Wswitch -Wunused-but-set-variable -Wunused-variable -Wunused-function -Wunused-parameter -Wincompatible-pointer-types -Wint-conversion -Wshadow -Wrestrict -Wcast-function-type -Wmaybe-uninitialized -Wno-aggregate-return -Wno-inline -Wno-missing-format-attribute -Wno-missing-noreturn -Wno-overlength-strings -Wno-jump-misses-init -Wstrict-overflow=2 -Wno-suggest-attribute=const -Wno-suggest-attribute=noreturn -Wno-suggest-attribute=pure -Wno-suggest-attribute=format -Wno-suggest-attribute=cold -Wno-suggest-attribute=malloc -O3 -version-info 300:3:0 -o libhdf5_hl.la -rpath /global/u2/z/zanhua/VOLS/HDF5/lib H5DO.lo H5DS.lo H5IM.lo H5LT.lo H5LTanalyze.lo H5LTparse.lo H5PT.lo H5TB.lo H5LD.lo ../../src/libhdf5.la -lpthread -lz -ldl -lm )
+libtool: install: /usr/bin/install -c .libs/libhdf5_hl.so.300.0.3T /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5_hl.so.300.0.3
+libtool: install: (cd /global/u2/z/zanhua/VOLS/HDF5/lib && { ln -s -f libhdf5_hl.so.300.0.3 libhdf5_hl.so.300 || { rm -f libhdf5_hl.so.300 && ln -s libhdf5_hl.so.300.0.3 libhdf5_hl.so.300; }; })
+libtool: install: (cd /global/u2/z/zanhua/VOLS/HDF5/lib && { ln -s -f libhdf5_hl.so.300.0.3 libhdf5_hl.so || { rm -f libhdf5_hl.so && ln -s libhdf5_hl.so.300.0.3 libhdf5_hl.so; }; })
+libtool: install: /usr/bin/install -c .libs/libhdf5_hl.lai /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5_hl.la
+libtool: install: /usr/bin/install -c .libs/libhdf5_hl.a /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5_hl.a
+libtool: install: chmod 644 /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5_hl.a
+libtool: install: ranlib /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5_hl.a
+libtool: finish: PATH="/global/common/software/nersc/bin:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Systems/2022.2.1:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Systems/2022.2.1/bin:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Compute/2022.1.1:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/cuda/11.7/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/cuda/11.7/libnvvp:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/profilers/Nsight_Compute:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/profilers/Nsight_Systems/bin:/opt/cray/pe/perftools/22.09.0/bin:/opt/cray/pe/papi/6.0.0.16/bin:/opt/cray/pe/gcc/11.2.0/bin:/opt/cray/pe/craype/2.7.19/bin:/opt/cray/pe/mpich/8.1.22/ofi/gnu/9.1/bin:/opt/cray/pe/mpich/8.1.22/bin:/opt/cray/libfabric/1.15.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/sbin" ldconfig -n /global/u2/z/zanhua/VOLS/HDF5/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /global/u2/z/zanhua/VOLS/HDF5/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/include'
+ /usr/bin/install -c -m 644 hdf5_hl.h H5DOpublic.h H5IMpublic.h H5LTpublic.h H5TBpublic.h H5DSpublic.h H5PTpublic.h H5LDpublic.h '/global/u2/z/zanhua/VOLS/HDF5/include'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/src'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/src'
+Making install in tools
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools'
+Making install in gif2h5
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools/gif2h5'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools/gif2h5'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c gif2h5 h52gif '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/gif2h5 /global/u2/z/zanhua/VOLS/HDF5/bin/gif2h5
+libtool: install: /usr/bin/install -c .libs/h52gif /global/u2/z/zanhua/VOLS/HDF5/bin/h52gif
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools/gif2h5'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools/gif2h5'
+Making install in h5watch
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools/h5watch'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools/h5watch'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/HDF5/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c h5watch '/global/u2/z/zanhua/VOLS/HDF5/bin'
+libtool: install: /usr/bin/install -c .libs/h5watch /global/u2/z/zanhua/VOLS/HDF5/bin/h5watch
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools/h5watch'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools/h5watch'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/tools'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl'
+for d in examples  hl; do               \
+    (cd $d && make  install-examples) || exit 1;           \
+done
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/examples'
+mkdir -p -m 755 /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c
++ /usr/bin/install -c ./h5_write.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_read.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_extend_write.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_chunk_read.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_compound.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_crtgrpd.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_subset.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_cmprss.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_rdwt.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_crtgrpar.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_extend.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_crtatt.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_crtgrp.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_crtdat.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_group.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_select.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_attribute.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_mount.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_drivers.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_reference_deprec.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_ref_extern.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_ref_compat.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_ref2reg_deprec.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_extlink.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_elink_unix2win.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_shared_mesg.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_debug_trace.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./ph5example.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./ph5_filtered_writes.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./ph5_filtered_writes_no_sel.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./ph5_subfiling.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_vds.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_vds-exc.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_vds-exclim.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_vds-eiger.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_vds-simpleIO.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_vds-percival.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_vds-percival-unlim.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./h5_vds-percival-unlim-maxmin.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c run-c-ex.sh /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/c/.
++ /usr/bin/install -c ./README /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/.
++ /usr/bin/install -c ./run-all-ex.sh /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/.
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/examples'
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl'
+for d in examples ; do               \
+    (cd $d && make  install-examples) || exit 1;           \
+done
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/examples'
+mkdir -p -m 755 /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c
++ /usr/bin/install -c ./ex_lite1.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_lite2.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_lite3.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ptExampleFL.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_image1.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_image2.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_01.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_02.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_03.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_04.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_05.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_06.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_07.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_08.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_09.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_10.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_11.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_table_12.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./ex_ds1.c /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./image24pixel.txt /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./image8.txt /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./pal_rgb.h /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c run-hlc-ex.sh /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/c/.
++ /usr/bin/install -c ./run-hl-ex.sh /global/u2/z/zanhua/VOLS/HDF5/share/hdf5_examples/hl/.
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl/examples'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/HDF5/hdf5-1.13.3/hl'

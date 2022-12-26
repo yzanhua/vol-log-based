@@ -1,0 +1,52 @@
+Consolidate compiler generated dependencies of target cache_new_h5api
+[  5%] Built target cache_new_h5api
+Consolidate compiler generated dependencies of target h5cache_vol
+[ 23%] Built target h5cache_vol
+Consolidate compiler generated dependencies of target test_dataset_async_api.exe
+[ 28%] Built target test_dataset_async_api.exe
+Consolidate compiler generated dependencies of target test_dataset.exe
+[ 33%] Built target test_dataset.exe
+Consolidate compiler generated dependencies of target test_write_multi.exe
+[ 38%] Built target test_write_multi.exe
+Consolidate compiler generated dependencies of target test_group.exe
+[ 43%] Built target test_group.exe
+Consolidate compiler generated dependencies of target test_file.exe
+[ 48%] Built target test_file.exe
+Consolidate compiler generated dependencies of target read_cache.exe
+[ 61%] Built target read_cache.exe
+Consolidate compiler generated dependencies of target prepare_dataset.exe
+[ 74%] Built target prepare_dataset.exe
+Consolidate compiler generated dependencies of target write.exe
+[ 87%] Built target write.exe
+Consolidate compiler generated dependencies of target write_cache.exe
+[100%] Built target write_cache.exe
+Install the project...
+-- Install configuration: ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/include/H5VLcache_ext.h
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/include/cache_new_h5api.h
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/include/H5LS.h
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/include/H5LS_SSD.h
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/include/H5LS_RAM.h
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/include/H5LS_GPU.h
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/include/H5VLcache_ext_private.h
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/lib/libh5cache_vol.so
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/lib/libh5cache_vol.so" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/lib/libcache_new_h5api.a
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/bin/test_file.exe
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/bin/test_file.exe" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/bin/test_group.exe
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/bin/test_group.exe" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/bin/test_dataset.exe
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/bin/test_dataset.exe" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/bin/test_dataset_async_api.exe
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/bin/test_dataset_async_api.exe" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/bin/test_write_multi.exe
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/bin/test_write_multi.exe" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/bin/write_cache.exe
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/bin/write_cache.exe" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/bin/write.exe
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/bin/write.exe" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/bin/prepare_dataset.exe
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/bin/prepare_dataset.exe" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Cache/bin/read_cache.exe
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Cache/bin/read_cache.exe" to ""

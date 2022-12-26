@@ -1,0 +1,23 @@
+-- The C compiler identification is GNU 11.2.0
+-- The CXX compiler identification is GNU 11.2.0
+-- Cray Programming Environment 2.7.19 C
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/cray/pe/craype/2.7.19/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Cray Programming Environment 2.7.19 CXX
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/cray/pe/craype/2.7.19/bin/CC - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found MPI_C: /opt/cray/pe/craype/2.7.19/bin/cc (found version "3.1") 
+-- Found MPI_CXX: /opt/cray/pe/craype/2.7.19/bin/CC (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found ASYNC: /global/u2/z/zanhua/VOLS/Async/lib/libasynchdf5.a;/global/u2/z/zanhua/VOLS/Async/lib/libh5async.so  
+-- Found HDF5: /global/u2/z/zanhua/VOLS/HDF5/lib/libhdf5.so;/usr/lib64/libpthread.so;/usr/lib64/libz.so;/usr/lib64/libdl.so;/usr/lib64/libm.so (found version "1.13.3") found components: C 
+-- Configuring hdf5_vol_cache 0.0.1
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /global/u2/z/zanhua/VOLS/Cache/vol-cache/build

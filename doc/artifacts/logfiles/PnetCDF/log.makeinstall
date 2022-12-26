@@ -1,0 +1,443 @@
+Making install in src
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src'
+Making install in include
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/include'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include'
+ /usr/bin/install -c -m 644 pnetcdf.h '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/include'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/include'
+Making install in dispatchers
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/dispatchers'
+make  install-am
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/dispatchers'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/dispatchers'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/dispatchers'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/dispatchers'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/dispatchers'
+Making install in drivers
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers'
+Making install in include
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/include'
+make  install-am
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/include'
+make[5]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/include'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/include'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/include'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/include'
+Making install in common
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/common'
+make  install-am
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/common'
+make[5]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/common'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/common'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/common'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/common'
+Making install in ncmpio
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/ncmpio'
+make  install-am
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/ncmpio'
+make[5]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/ncmpio'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/ncmpio'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/ncmpio'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers/ncmpio'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/drivers'
+Making install in binding
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding'
+Making install in cxx
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/cxx'
+make  install-am
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/cxx'
+make[5]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/cxx'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include'
+ /usr/bin/install -c -m 644 pnetcdf '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include'
+make[5]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/cxx'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/cxx'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/cxx'
+Making install in f77
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f77'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f77'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include'
+ /usr/bin/install -c -m 644 pnetcdf.inc '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f77'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f77'
+Making install in f90
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f90'
+make  install-am
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f90'
+make[5]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f90'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include'
+ /usr/bin/install -c -m 644 pnetcdf.mod '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include'
+make[5]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f90'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f90'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding/f90'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/binding'
+Making install in packaging
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/packaging'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/packaging'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib/pkgconfig'
+ /usr/bin/install -c -m 644 pnetcdf.pc '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib/pkgconfig'
+make  install-data-hook
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/packaging'
+/usr/bin/sed -i'' -e 's|INSTALL_PREFIX|/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3|g ; s|INSTALL_EXEC_PREFIX|/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3|g' /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib/pkgconfig/pnetcdf.pc
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/packaging'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/packaging'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/packaging'
+Making install in .
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src'
+Making install in libs
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/libs'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/libs'
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libpnetcdf.la '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib'
+libtool: install: /usr/bin/install -c .libs/libpnetcdf.so.4.0.3 /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib/libpnetcdf.so.4.0.3
+libtool: install: (cd /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib && { ln -s -f libpnetcdf.so.4.0.3 libpnetcdf.so.4 || { rm -f libpnetcdf.so.4 && ln -s libpnetcdf.so.4.0.3 libpnetcdf.so.4; }; })
+libtool: install: (cd /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib && { ln -s -f libpnetcdf.so.4.0.3 libpnetcdf.so || { rm -f libpnetcdf.so && ln -s libpnetcdf.so.4.0.3 libpnetcdf.so; }; })
+libtool: install: /usr/bin/install -c .libs/libpnetcdf.lai /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib/libpnetcdf.la
+libtool: install: /usr/bin/install -c .libs/libpnetcdf.a /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib/libpnetcdf.a
+libtool: install: chmod 644 /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib/libpnetcdf.a
+libtool: install: ranlib /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib/libpnetcdf.a
+libtool: finish: PATH="/global/common/software/nersc/bin:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Systems/2022.2.1:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Systems/2022.2.1/bin:/global/common/software/nersc/pm-2021q4/easybuild/software/Nsight-Compute/2022.1.1:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/cuda/11.7/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/cuda/11.7/libnvvp:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/profilers/Nsight_Compute:/opt/nvidia/hpc_sdk/Linux_x86_64/22.5/profilers/Nsight_Systems/bin:/opt/cray/pe/perftools/22.09.0/bin:/opt/cray/pe/papi/6.0.0.16/bin:/opt/cray/pe/gcc/11.2.0/bin:/opt/cray/pe/craype/2.7.19/bin:/opt/cray/pe/mpich/8.1.22/ofi/gnu/9.1/bin:/opt/cray/pe/mpich/8.1.22/bin:/opt/cray/libfabric/1.15.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/sbin" ldconfig -n /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/libs'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/libs'
+Making install in utils
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils'
+Making install in ncmpigen
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpigen'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpigen'
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c ncmpigen '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+libtool: install: /usr/bin/install -c .libs/ncmpigen /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin/ncmpigen
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+ /usr/bin/install -c -m 644 ../../../../pnetcdf-1.12.3/src/utils/ncmpigen/ncmpigen.1 '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpigen'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpigen'
+Making install in ncmpidump
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpidump'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpidump'
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c ncmpidump '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+libtool: install: /usr/bin/install -c .libs/ncmpidump /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin/ncmpidump
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+ /usr/bin/install -c -m 644 ../../../../pnetcdf-1.12.3/src/utils/ncmpidump/ncmpidump.1 '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpidump'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpidump'
+Making install in ncmpidiff
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpidiff'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpidiff'
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c ncmpidiff cdfdiff '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+libtool: install: /usr/bin/install -c .libs/ncmpidiff /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin/ncmpidiff
+libtool: install: /usr/bin/install -c cdfdiff /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin/cdfdiff
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+ /usr/bin/install -c -m 644 ../../../../pnetcdf-1.12.3/src/utils/ncmpidiff/ncmpidiff.1 ../../../../pnetcdf-1.12.3/src/utils/ncmpidiff/cdfdiff.1 '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpidiff'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncmpidiff'
+Making install in ncvalidator
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncvalidator'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncvalidator'
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c ncvalidator '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+libtool: install: /usr/bin/install -c ncvalidator /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin/ncvalidator
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+ /usr/bin/install -c -m 644 ../../../../pnetcdf-1.12.3/src/utils/ncvalidator/ncvalidator.1 '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncvalidator'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncvalidator'
+Making install in pnetcdf_version
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/pnetcdf_version'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/pnetcdf_version'
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c pnetcdf_version '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+libtool: install: /usr/bin/install -c pnetcdf_version /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin/pnetcdf_version
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+ /usr/bin/install -c -m 644 ../../../../pnetcdf-1.12.3/src/utils/pnetcdf_version/pnetcdf_version.1 '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/pnetcdf_version'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/pnetcdf_version'
+Making install in ncoffsets
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncoffsets'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncoffsets'
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c ncoffsets '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+libtool: install: /usr/bin/install -c ncoffsets /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin/ncoffsets
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+ /usr/bin/install -c -m 644 ../../../../pnetcdf-1.12.3/src/utils/ncoffsets/ncoffsets.1 '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man1'
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncoffsets'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils/ncoffsets'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils'
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+ /usr/bin/install -c pnetcdf-config '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin'
+make  install-exec-hook
+make[5]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils'
+/usr/bin/sed -i'' -e 's|INSTALL_PREFIX|/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3|g ; s|INSTALL_EXEC_PREFIX|/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3|g' /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin/pnetcdf-config
+chmod +x /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin/pnetcdf-config
+make[5]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils'
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src/utils'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/src'
+Making install in man
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/man'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/man'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man3'
+ /usr/bin/install -c -m 644 pnetcdf.3 pnetcdf_f77.3 pnetcdf_f90.3 '/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man/man3'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/man'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/man'
+Making install in examples
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples'
+Making install in C
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/C'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/C'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/C'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/C'
+Making install in CXX
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/CXX'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/CXX'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/CXX'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/CXX'
+Making install in F77
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/F77'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/F77'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/F77'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/F77'
+Making install in F90
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/F90'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/F90'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/F90'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/F90'
+Making install in tutorial
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/tutorial'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/tutorial'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/tutorial'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples/tutorial'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/examples'
+Making install in benchmarks
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks'
+Making install in C
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks/C'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks/C'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks/C'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks/C'
+Making install in FLASH-IO
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks/FLASH-IO'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks/FLASH-IO'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks/FLASH-IO'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks/FLASH-IO'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/benchmarks'
+Making install in test
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test'
+Making install in common
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/common'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/common'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/common'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/common'
+Making install in C
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/C'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/C'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/C'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/C'
+Making install in fandc
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/fandc'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/fandc'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/fandc'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/fandc'
+Making install in nc_test
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nc_test'
+make  install-am
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nc_test'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nc_test'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nc_test'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nc_test'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nc_test'
+Making install in cdf_format
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/cdf_format'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/cdf_format'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/cdf_format'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/cdf_format'
+Making install in header
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/header'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/header'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/header'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/header'
+Making install in testcases
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/testcases'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/testcases'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/testcases'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/testcases'
+Making install in nonblocking
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nonblocking'
+make  install-am
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nonblocking'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nonblocking'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nonblocking'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nonblocking'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nonblocking'
+Making install in CXX
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/CXX'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/CXX'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/CXX'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/CXX'
+Making install in nf_test
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nf_test'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nf_test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nf_test'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nf_test'
+Making install in nf90_test
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nf90_test'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nf90_test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nf90_test'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/nf90_test'
+Making install in F90
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/F90'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/F90'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/F90'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test/F90'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build/test'
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+make  install-data-hook
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/PnetCDF/build'
++----------------------------------------------------------------------------+
+|
+|  PnetCDF has been successfully installed under
+|          /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3
+|
+|  * PnetCDF header files have been installed in
+|          /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include
+|  * PnetCDF library files have been installed in
+|          /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib
+|  * PnetCDF utility programs have been installed in
+|          /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/bin
+|  * PnetCDF man pages have been installed in
+|          /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/share/man
+|
+|  To compile your PnetCDF programs, please add the following to the command
+|  line, so the compiler can find the PnetCDF header files:
+|      -I/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/include
+|
+|  Add the following line to link your program to PnetCDF library:
+|      -L/global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib -lpnetcdf
+|
+|  Add the following to your run-time environment variable LD_LIBRARY_PATH,
+|  when linking your executable with the PnetCDF shared libraries.
+|      /global/homes/z/zanhua/VOLS/PnetCDF/1.12.3/lib
+|
+|
+|  PnetCDF is jointly developed by a team at Northwestern University and
+|  Argonne National Laboratory.
+|
+|  Visit PnetCDF project web site for more information
+|      https://parallel-netcdf.github.io
+|
++----------------------------------------------------------------------------+
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/PnetCDF/build'

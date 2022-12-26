@@ -1,0 +1,33 @@
+Consolidate compiler generated dependencies of target asynchdf5
+[  7%] Built target asynchdf5
+Consolidate compiler generated dependencies of target h5async
+[ 15%] Built target h5async
+Consolidate compiler generated dependencies of target async_test_multifile.exe
+[ 23%] Built target async_test_multifile.exe
+Consolidate compiler generated dependencies of target async_test_serial_mdset.exe
+[ 30%] Built target async_test_serial_mdset.exe
+Consolidate compiler generated dependencies of target async_test_serial.exe
+[ 38%] Built target async_test_serial.exe
+Consolidate compiler generated dependencies of target async_test_serial2.exe
+[ 46%] Built target async_test_serial2.exe
+Consolidate compiler generated dependencies of target async_test_serial_event_set.exe
+[ 53%] Built target async_test_serial_event_set.exe
+Consolidate compiler generated dependencies of target async_test_serial_event_set_error_stack.exe
+[ 61%] Built target async_test_serial_event_set_error_stack.exe
+Consolidate compiler generated dependencies of target async_test_parallel2.exe
+[ 69%] Built target async_test_parallel2.exe
+Consolidate compiler generated dependencies of target async_test_parallel3.exe
+[ 76%] Built target async_test_parallel3.exe
+Consolidate compiler generated dependencies of target async_test_parallel4.exe
+[ 84%] Built target async_test_parallel4.exe
+Consolidate compiler generated dependencies of target async_test_parallel5.exe
+[ 92%] Built target async_test_parallel5.exe
+Consolidate compiler generated dependencies of target async_test_parallel.exe
+[100%] Built target async_test_parallel.exe
+Install the project...
+-- Install configuration: ""
+-- Installing: /global/u2/z/zanhua/VOLS/Async/include/h5_async_lib.h
+-- Installing: /global/u2/z/zanhua/VOLS/Async/include/h5_async_vol.h
+-- Installing: /global/u2/z/zanhua/VOLS/Async/lib/libh5async.so
+-- Set runtime path of "/global/u2/z/zanhua/VOLS/Async/lib/libh5async.so" to ""
+-- Installing: /global/u2/z/zanhua/VOLS/Async/lib/libasynchdf5.a

@@ -1,0 +1,57 @@
+Making install in src
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src'
+make  install-recursive
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src'
+Making install in drivers
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src/drivers'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src/drivers'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src/drivers'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src/drivers'
+Making install in cases
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src/cases'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src/cases'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src/cases'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src/cases'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src'
+make[4]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/E3SM/install/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c e3sm_io '/global/u2/z/zanhua/VOLS/E3SM/install/bin'
+libtool: install: /usr/bin/install -c e3sm_io /global/u2/z/zanhua/VOLS/E3SM/install/bin/e3sm_io
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src'
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/src'
+Making install in datasets
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/datasets'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/datasets'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/datasets'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/datasets'
+Making install in utils
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/utils'
+make  install-am
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/utils'
+make[3]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/utils'
+ /usr/bin/mkdir -p '/global/u2/z/zanhua/VOLS/E3SM/install/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c datstat dat2decomp decomp_copy dat2nc pnetcdf_blob_replay '/global/u2/z/zanhua/VOLS/E3SM/install/bin'
+libtool: install: /usr/bin/install -c datstat /global/u2/z/zanhua/VOLS/E3SM/install/bin/datstat
+libtool: install: /usr/bin/install -c dat2decomp /global/u2/z/zanhua/VOLS/E3SM/install/bin/dat2decomp
+libtool: install: /usr/bin/install -c decomp_copy /global/u2/z/zanhua/VOLS/E3SM/install/bin/decomp_copy
+libtool: install: /usr/bin/install -c dat2nc /global/u2/z/zanhua/VOLS/E3SM/install/bin/dat2nc
+libtool: install: /usr/bin/install -c pnetcdf_blob_replay /global/u2/z/zanhua/VOLS/E3SM/install/bin/pnetcdf_blob_replay
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/utils'
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/utils'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/utils'
+make[1]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO'
+make[2]: Entering directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO'
+make[1]: Leaving directory '/global/u2/z/zanhua/VOLS/E3SM/E3SM-IO'
