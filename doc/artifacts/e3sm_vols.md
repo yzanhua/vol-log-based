@@ -273,9 +273,12 @@ This document provides supporting evidence of the integration of the HDF5 Log VO
 
 ## Results
 F case (`map_f_case_16p.h5`): [f.out](./results/f.out)
+
 G case (`map_g_case_16p.h5`): did not finish
+
 I case (`map_i_case_16p.h5`): [i.out](./results/i.out)
 
-Also tried large F case (`map_f_case_21600p.h5`) using 8 Nodes with 64 MPI processes per Node, But the program did not finish.
+
+Also tried large F case (`map_f_case_21600p.h5`) using 8 Nodes with 64 MPI processes per Node, but the program did not finish.
 
 
