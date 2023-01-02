@@ -1,0 +1,72 @@
+==== Benchmarking F case =============================
+Total number of MPI processes      = 16
+Number of IO processes             = 16
+Input decomposition file           = /global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/datasets/map_f_case_16p.h5
+Number of decompositions           = 3
+Output file/directory              = /pscratch/sd/z/zanhua/FS_1M_16/e3sm_io/log_F_out.h5
+Using noncontiguous write buffer   = no
+Variable write order: same as variables are defined
+==== HDF5 using log-based VOL through native APIs=====
+History output file                = /pscratch/sd/z/zanhua/FS_1M_16/e3sm_io/log_F_out_h0.h5
+No. variables use no decomposition =     27
+No. variables use decomposition D0 =      1
+No. variables use decomposition D1 =    323
+No. variables use decomposition D2 =     63
+Total no. climate variables        =    414
+Total no. attributes               =   1421
+Total no. noncontiguous requests   = 4207968
+Max   no. noncontiguous requests   = 272135
+Min   no. noncontiguous requests   = 252670
+Write no. records (time dim)       =      1
+I/O flush frequency                =      1
+No. I/O flush calls                =      1
+-----------------------------------------------------------
+Total write amount                         = 16.97 MiB = 0.02 GiB
+Time of I/O preparing              min/max =   0.0006 /   0.0011
+Time of file open/create           min/max =   0.0289 /   0.0292
+Time of define variables           min/max =   0.0312 /   0.0312
+Time of posting write requests     min/max =   0.1431 /   0.1999
+Time of write flushing             min/max =   0.0000 /   0.0000
+Time of close                      min/max =   0.0376 /   0.0378
+end-to-end time                    min/max =   0.2990 /   0.2993
+Emulate computation time (sleep)   min/max =   0.0000 /   0.0000
+I/O bandwidth in MiB/sec (write-only)      = 99812006.9999
+I/O bandwidth in MiB/sec (open-to-close)   = 56.7017
+-----------------------------------------------------------
+==== Benchmarking F case =============================
+Total number of MPI processes      = 16
+Number of IO processes             = 16
+Input decomposition file           = /global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/datasets/map_f_case_16p.h5
+Number of decompositions           = 3
+Output file/directory              = /pscratch/sd/z/zanhua/FS_1M_16/e3sm_io/log_F_out.h5
+Using noncontiguous write buffer   = no
+Variable write order: same as variables are defined
+==== HDF5 using log-based VOL through native APIs=====
+History output file                = /pscratch/sd/z/zanhua/FS_1M_16/e3sm_io/log_F_out_h1.h5
+No. variables use no decomposition =     27
+No. variables use decomposition D0 =      1
+No. variables use decomposition D1 =     22
+No. variables use decomposition D2 =      1
+Total no. climate variables        =     51
+Total no. attributes               =    142
+Total no. noncontiguous requests   = 1993966
+Max   no. noncontiguous requests   = 129303
+Min   no. noncontiguous requests   = 119706
+Write no. records (time dim)       =     25
+I/O flush frequency                =      1
+No. I/O flush calls                =     25
+-----------------------------------------------------------
+Total write amount                         = 7.96 MiB = 0.01 GiB
+Time of I/O preparing              min/max =   0.0000 /   0.0000
+Time of file open/create           min/max =   0.0118 /   0.0121
+Time of define variables           min/max =   0.0029 /   0.0029
+Time of posting write requests     min/max =   0.0698 /   0.0966
+Time of write flushing             min/max =   0.0000 /   0.0000
+Time of close                      min/max =   0.0154 /   0.0158
+end-to-end time                    min/max =   0.1272 /   0.1276
+Emulate computation time (sleep)   min/max =   0.0000 /   0.0000
+I/O bandwidth in MiB/sec (write-only)      = 3696198.8207
+I/O bandwidth in MiB/sec (open-to-close)   = 62.3723
+-----------------------------------------------------------
+read_decomp=0.05 e3sm_io_core=0.43 MPI init-to-finalize=0.49
+-----------------------------------------------------------

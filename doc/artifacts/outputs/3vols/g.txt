@@ -1,0 +1,56 @@
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+==== Benchmarking G case =============================
+Total number of MPI processes      = 16
+Number of IO processes             = 16
+Input decomposition file           = /global/u2/z/zanhua/VOLS/E3SM/E3SM-IO/datasets/map_g_case_16p.h5
+Number of decompositions           = 6
+Output file/directory              = /pscratch/sd/z/zanhua/FS_1M_16/e3sm_io/3vols/log_G_out.h5
+Using noncontiguous write buffer   = no
+Variable write order: same as variables are defined
+==== HDF5 using log-based VOL through native APIs=====
+History output file                = /pscratch/sd/z/zanhua/FS_1M_16/e3sm_io/3vols/log_G_out.h5
+No. variables use no decomposition =     11
+No. variables use decomposition D0 =      6
+No. variables use decomposition D1 =      2
+No. variables use decomposition D2 =     25
+No. variables use decomposition D3 =      2
+No. variables use decomposition D4 =      2
+No. variables use decomposition D5 =      4
+Total no. climate variables        =     52
+Total no. attributes               =    851
+Total no. noncontiguous requests   = 252526
+Max   no. noncontiguous requests   =  18145
+Min   no. noncontiguous requests   =  13861
+Write no. records (time dim)       =     25
+I/O flush frequency                =      1
+No. I/O flush calls                =     25
+-----------------------------------------------------------
+Total write amount                         = 182.12 MiB = 0.18 GiB
+Time of I/O preparing              min/max =   0.0002 /   0.0003
+Time of file open/create           min/max =   0.0133 /   0.0135
+Time of define variables           min/max =   0.3156 /   0.3157
+Time of posting write requests     min/max =   0.7677 /   0.8147
+Time of write flushing             min/max =   0.0000 /   0.0000
+Time of close                      min/max =   0.2151 /   0.2157
+end-to-end time                    min/max =   1.3768 /   1.3774
+Emulate computation time (sleep)   min/max =   0.0000 /   0.0000
+I/O bandwidth in MiB/sec (write-only)      = 35564135.1667
+I/O bandwidth in MiB/sec (open-to-close)   = 132.2233
+-----------------------------------------------------------
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+Warning: An error occured in e3sm_io_driver_hdf5::inq_file_info in e3sm_io_driver_hdf5.cpp. Use MPI_INFO_NULL.
+read_decomp=0.06 e3sm_io_core=1.38 MPI init-to-finalize=1.44
+-----------------------------------------------------------
